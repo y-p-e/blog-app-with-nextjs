@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Button from '@mui/material/Button';
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,9 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+        <div>
+          <Button variant="contained">Hello World</Button>
+        </div>
 
         <p className={styles.description}>
           Get started by editing{' '}
