@@ -24,3 +24,9 @@ n-import
 npm run lint
 npm run format
 ```
+
+### StoryBook 起動コマンド
+
+```
+npm run storybook
+```
