@@ -5,7 +5,7 @@ import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 
-const SideMenueItem = () => {
+const SideMenuItem = () => {
   return (
     <List>
       <ListItem disablePadding>
@@ -20,4 +20,4 @@ const SideMenueItem = () => {
   )
 }
 
-export default SideMenueItem
+export default SideMenuItem

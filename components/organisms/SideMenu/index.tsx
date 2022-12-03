@@ -8,15 +8,15 @@ import IconButton from '@mui/material/IconButton'
 import { useTheme } from '@mui/material/styles'
 import { useState } from 'react'
 import DrawerHeader from '../DrawerHeader/index'
-import SideMenueItem from '../SideMenueItem/index'
+import SideMenuItem from '../SideMenuItem/index'
 
-type SideMenueProps = {
+type SideMenuProps = {
   isOpen: boolean
 }
 
 const drawerWidth = 240
 
-const SideMenue = (props: SideMenueProps) => {
+const SideMenu = (props: SideMenuProps) => {
   const { isOpen } = props
   const theme = useTheme()
   const [open, setOpen] = useState(isOpen)
@@ -51,10 +51,10 @@ const SideMenue = (props: SideMenueProps) => {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <SideMenueItem />
+        <SideMenuItem />
       </Drawer>
     </Box>
   )
 }
 
-export default SideMenue
+export default SideMenu

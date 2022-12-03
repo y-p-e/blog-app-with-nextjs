@@ -1,18 +1,27 @@
-import LogoutIcon from '@mui/icons-material/Logout'
-import MenuIcon from '@mui/icons-material/Menu'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
-import IconButton from '@mui/material/IconButton'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
+import LogoutIconButton from '../../atoms/LogoutIconButton/index'
+import MenuIconButton from '../../atoms/MenuIconButton/index'
 
 type HeaderProps = {
+  isShowMenuIcon: boolean
+  isShowLogoutIcon: boolean
+  menuIconButtonOnClick: () => void
+  logoutIconButtonOnClick: () => void
   title: string
 }
 
 const Header = (props: HeaderProps) => {
-  const { title } = props
+  const {
+    title,
+    isShowMenuIcon,
+    isShowLogoutIcon,
+    menuIconButtonOnClick,
+    logoutIconButtonOnClick,
+  } = props
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid
@@ -24,15 +33,9 @@ const Header = (props: HeaderProps) => {
         <AppBar position="static">
           <Toolbar>
             <Grid item xs={1}>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                sx={{ mr: 2 }}
-              >
-                <MenuIcon />
-              </IconButton>
+              {isShowMenuIcon && (
+                <MenuIconButton onClick={menuIconButtonOnClick} />
+              )}
             </Grid>
             <Grid item xs={10}>
               <Typography variant="h6" component="div" align="center">
@@ -40,15 +43,9 @@ const Header = (props: HeaderProps) => {
               </Typography>
             </Grid>
             <Grid item xs={1} sx={{ textAlign: 'right' }}>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                sx={{ mr: 2 }}
-              >
-                <LogoutIcon />
-              </IconButton>
+              {isShowLogoutIcon && (
+                <LogoutIconButton onClick={logoutIconButtonOnClick} />
+              )}
             </Grid>
           </Toolbar>
         </AppBar>

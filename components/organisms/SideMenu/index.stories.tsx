@@ -1,8 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import SideMenue from './index'
+import SideMenu from './index'
 
 export default {
-  title: 'organisms/SideMenue',
+  title: 'organisms/SideMenu',
   argTypes: {
     isOpen: {
       control: { type: 'boolean' },
@@ -12,10 +12,10 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof SideMenue>
+} as ComponentMeta<typeof SideMenu>
 
-const Template: ComponentStory<typeof SideMenue> = (args) => (
-  <SideMenue {...args} />
+const Template: ComponentStory<typeof SideMenu> = (args) => (
+  <SideMenu {...args} />
 )
 
 export const MenuOpen = Template.bind({})
