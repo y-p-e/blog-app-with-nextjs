@@ -73,7 +73,7 @@ const BackOfficeLayout = (props: BackOfficeLayoutProps) => {
         isShowLogoutIcon={true}
         menuIconButtonOnClick={handleDrawerOpen}
         logoutIconButtonOnClick={() => {
-          // ログアウト機能を実装        
+          // ログアウト機能を実装
         }}
         title="管理画面"
         open={open}

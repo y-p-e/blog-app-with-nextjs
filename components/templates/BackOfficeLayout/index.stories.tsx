@@ -1,15 +1,35 @@
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
+import AdminPostCardList from '../../organisms/AdminPostCardList/index'
 import BackOfficeLayout from './index'
 
 export default {
   title: 'templates/BackOffice',
 } as ComponentMeta<typeof BackOfficeLayout>
+const post1 = {
+  postId: 1,
+  title: '記事一覧画面について',
+  status: '公開中',
+}
+const post2 = {
+  postId: 2,
+  title: '記事一覧詳細画面について',
+  status: '一時保存',
+}
+const post3 = {
+  postId: 3,
+  title: 'ログイン画面について',
+  status: '非公開',
+}
+const posts = [post1, post2, post3]
 
 const Children = () => {
   return (
     <Grid container spacing={2}>
+      <Grid item xs={12}>
+        <AdminPostCardList posts={posts} />
+      </Grid>
       <Grid item xs={8}>
         <Typography paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
