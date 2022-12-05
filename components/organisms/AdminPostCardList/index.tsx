@@ -6,12 +6,7 @@ import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
-
-type AdminPost = {
-  postId: number
-  title: string
-  status: string
-}
+import type { AdminPost } from '../../../types/data'
 
 type AdminPostCardListProps = {
   posts: AdminPost[]
