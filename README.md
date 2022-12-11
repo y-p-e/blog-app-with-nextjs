@@ -52,3 +52,9 @@ npm run storybook
 
 https://github.com/uiwjs/react-md-editor
 https://uiwjs.github.io/react-md-editor/
+
+### マークダウン画像表示確認用
+
+```
+![エビフライトライアングル](http://i.imgur.com/Jjwsc.jpg "サンプル")
+```
