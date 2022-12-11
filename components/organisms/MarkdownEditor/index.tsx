@@ -1,19 +1,23 @@
 import '@uiw/react-md-editor/markdown-editor.css'
 import '@uiw/react-markdown-preview/markdown.css'
 import dynamic from 'next/dynamic'
-import { useState } from 'react'
+
+type MarkdownEditorProps = {
+  text: string | undefined
+  setText: React.Dispatch<React.SetStateAction<string | undefined>>
+}
 
 const MDEditor = dynamic(() => import('@uiw/react-md-editor'), { ssr: false })
 
-const MarkdownEditor = () => {
-  const [value, setValue] = useState<string | undefined>('**Hello world!!!**')
+const MarkdownEditor = (props: MarkdownEditorProps) => {
+  const { text, setText } = props
   return (
     <>
       <div>
         <MDEditor
           height={420}
-          value={value}
-          onChange={(value?: string) => setValue(value)}
+          value={text}
+          onChange={(value?: string | undefined) => setText(value)}
         />
       </div>
     </>
