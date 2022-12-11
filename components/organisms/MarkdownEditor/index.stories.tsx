@@ -5,8 +5,6 @@ export default {
   title: 'organisms/MarkdownEditor',
 } as ComponentMeta<typeof MarkdownEditor>
 
-const Template: ComponentStory<typeof MarkdownEditor> = () => (
-  <MarkdownEditor />
-)
+const Template: ComponentStory<typeof MarkdownEditor> = () => <MarkdownEditor />
 
 export const Editor = Template.bind({})
