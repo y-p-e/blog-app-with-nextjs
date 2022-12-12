@@ -9,7 +9,11 @@ type PostStatusSwitchProps = {
 
 const PostStatusSwitch = (props: PostStatusSwitchProps) => {
   const { status, setStatus } = props
-  const [checked, setChecked] = useState(false)
+  let initChecked = true
+  if (status === '非公開') {
+    initChecked = false
+  }
+  const [checked, setChecked] = useState(initChecked)
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const isChecked = event.target.checked
