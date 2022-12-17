@@ -4,18 +4,20 @@ import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
-
+import NextLink from 'next/link'
 const SideMenuItem = () => {
   return (
     <List>
-      <ListItem disablePadding>
-        <ListItemButton>
-          <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon>
-          <ListItemText primary="ダッシュボード" />
-        </ListItemButton>
-      </ListItem>
+      <NextLink href="/admin/posts">
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary="記事一覧" />
+          </ListItemButton>
+        </ListItem>
+      </NextLink>
     </List>
   )
 }
