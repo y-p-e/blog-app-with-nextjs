@@ -18,6 +18,16 @@ const SideMenuItem = () => {
           </ListItemButton>
         </ListItem>
       </NextLink>
+      <NextLink href="/admin/post-edit">
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary="新規作成" />
+          </ListItemButton>
+        </ListItem>
+      </NextLink>
     </List>
   )
 }

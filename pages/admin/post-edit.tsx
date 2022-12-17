@@ -22,7 +22,6 @@ const AdminPosts: NextPage = () => {
     text: text,
     status: status,
   }
-  console.log(post)
   return (
     <BackOfficeLayout>
       <AdminPostEditContainer post={post} />
