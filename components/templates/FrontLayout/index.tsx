@@ -1,13 +1,12 @@
 import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
-import { styled, ThemeProvider } from '@mui/material/styles'
+import { ThemeProvider } from '@mui/material/styles'
 import { useState, ReactNode } from 'react'
 
-import DrawerHeader from '../../organisms/DrawerHeader/index'
 import FrontHeader from '../../organisms/FrontHeader/index'
-import SideMenu from '../../organisms/SideMenu/index'
 import theme from '../../../theme/theme'
 import Container from '@mui/material/Container';
+import Footer from '../../organisms/Footer'
 
 const drawerWidth = 240
 
@@ -17,16 +16,6 @@ type FrontLayoutProps = {
 
 const FrontLayout = (props: FrontLayoutProps) => {
   const { children } = props
-  const [open, setOpen] = useState(false)
-
-  const handleDrawerOpen = () => {
-    setOpen(true)
-  }
-
-  const handleDrawerClose = () => {
-    setOpen(false)
-  }
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -37,6 +26,8 @@ const FrontLayout = (props: FrontLayoutProps) => {
           {children}
         </Container>
       </Box>
+      <br />
+      <Footer />
     </ThemeProvider>
   )
 }
